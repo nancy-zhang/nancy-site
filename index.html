@@ -470,8 +470,8 @@
     </div>
     <nav id="nav">
       <a href="#about" class="active">About</a>
-      <a href="#pomona">Pomona</a>
       <a href="#datemyfriend">DateMyFriend</a>
+      <a href="#pomona">Pomona</a>
       <a href="#forfun">For Fun</a>
     </nav>
     <div class="social-icons">
@@ -502,17 +502,10 @@
     <section id="about">
       <div class="section-label">About</div>
       <p>I'm a data scientist, AI/ML researcher, and creative. I love applications of AI that expand the surface area of human creativity, and I strive to make the world a more beautiful and connected place. Relatedly, I love exploring fashion and craft.</p> 
-      <p>For work, I developed the AI/ML pipeline at Lifemine Therapeutics for natural product drug discovery from fungal genomic sequences. I piloted the development of our first fungal foundation model <a class="inline" href="https://patents.google.com/patent/US20250069701A1/en" target="_blank">(patent pending)</a>. Before that, I started my career in biotech at Ginkgo Bioworks, where I trained models to detect traces of bioengineering (bioweapons would certainly make the world less beautiful and less connected).</p>
-      <p>My other interests include: Victorian literature, great films, French beading, people who are very good at thinking about systems, and whimsical objects. My wildest dreams include: directing a movie, designing a fashion line, becoming like Iris van Herpen.</p>
+      <p>For work, I developed the AI/ML pipeline at Lifemine Therapeutics for natural product drug discovery from fungal genomic sequences. I piloted the development of our first fungal foundation model <a class="inline" href="https://patents.google.com/patent/US20250069701A1/en" target="_blank">(patent pending)</a>. Before that, I started my career in biotech at Ginkgo Bioworks, where I trained models to detect traces of bioengineering.</p>
+      <p>My other interests include: Victorian literature, great films, French beading, and whimsical objects. My wildest dreams include: directing a movie, designing a fashion line, having a lemon tree in my backyard. </p>
       <p>I graduated Magna Cum Laude, Phi Beta Kappa with a degree in Math from Wellesley. My master's thesis at Harvard was on Approximate Bayesian Computation for Parameter Inference and Model Selection in Mechanistic Network Models, advised by J.P. Onnela.</p>
       <p>If you'd love to chat, reach out at nancyann [dot] zhang @ gmail!</p>
-    </section>
-
-    <!-- Pomona -->
-    <section id="pomona">
-      <div class="section-label">Pomona</div>
-      <p>My biotech work these days focuses on allergies, the bane of my existence. I was briefly a Product Manager at Pacagen, a consumer allergy startup. Currently, I'm launching a research initiative, <a class="inline" href="https://pomona.bio" target="blank">Pomona</a>, to explore AI-driven research and development of hypoallergenic food proteins.</p>
-      <p>We also have a community awareness and advocacy arm. If you suffer from food allergies, whether it's anaphylaxis to peanuts or an itchy mouth from certain fruits or vegetables, stay tuned!</p>
     </section>
 
     <!-- DateMyFriend -->
@@ -569,6 +562,13 @@
       </div>
     </section>
 
+    <!-- Pomona -->
+    <section id="pomona">
+      <div class="section-label">Pomona</div>
+      <p>My biotech work these days focuses on allergies, the bane of my existence. I was briefly a Product Manager at Pacagen, a consumer allergy startup. Currently, I'm launching a research initiative, <a class="inline" href="https://pomona.bio" target="blank">Pomona</a>, to explore AI-driven research and development of hypoallergenic food proteins.</p>
+      <p>We also have a community awareness and advocacy arm. If you suffer from food allergies, whether it's anaphylaxis to peanuts or an itchy mouth from certain fruits or vegetables, stay tuned!</p>
+    </section>
+
     <!-- For Fun -->
     <section id="forfun">
       <div class="section-label">For Fun</div>
@@ -577,7 +577,7 @@
         <li>This summer, I'll be a Haystack Fellow for metalsmithing at Haystack Mountain School of Crafts</li>
         <li>I was a ball girl at the US Open in 2023. Before that, I hadn't even been to a tennis match before, but I was motivated to make the highly selective team because I wanted to get into tennis</li>
         <li>I'm obsessed with the game Tradle, where you guess a country based on its exports, Wordle style. I made a website to visualize global exports so I can study more effectively: <a class="inline" href="https://nancy-zhang.github.io/tradle-trainer/" target="_blank">Tradle Trainer</a></li>
-        <li>I love to write, and I maintain a pseudonymous blog about life in NYC</li>
+        <li>I love to write, and I maintain a pseudonymous blog</li>
         <li>I document many of my creative endeavors on TikTok under <@schrodingersbrat></li>
       </ul>
     </section>
@@ -609,7 +609,7 @@
 
 <script>
   // ── Active nav on scroll ──
-  const sections = ['about','pomona','datemyfriend','forfun'];
+  const sections = ['about','datemyfriend','pomona','forfun'];
   const navLinks = document.querySelectorAll('#nav a');
 
   const observer = new IntersectionObserver((entries) => {
