@@ -149,6 +149,9 @@
   .stats a:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
   #dataLink{border-bottom:1px dotted var(--dim); cursor:pointer;}
   #dataLink:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
+  footer .credit{margin-left:auto; text-transform:none;}
+  footer .credit a{color:var(--dim); text-decoration:none; border-bottom:1px dotted var(--dim);}
+  footer .credit a:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
   .mp-card a{color:var(--ink); text-decoration:none; border-bottom:1px dotted var(--muted);}
   .mp-card a:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
   .mp-card{
@@ -293,7 +296,9 @@ document.getElementById('foot').innerHTML =
      <span><i class="dot" style="background:#9FB6C9"></i>Actor</span>
      <span><i class="dot" style="background:var(--amber)"></i>Director</span>
    </span>
-   <span id="dataLink">Data &amp; methodology</span>`;
+   <span id="dataLink">Data &amp; methodology</span>
+   <span class="credit">made by <a href="https://nancyzhang.net" target="_blank" rel="noopener">nancy zhang</a>
+   (<a href="https://x.com/shenanigancy" target="_blank" rel="noopener">@shenanigancy</a>)</span>`;
 document.getElementById('dsFilms').textContent = meta.films.toLocaleString('en-US');
 document.getElementById('dsPeople').textContent = meta.people.toLocaleString('en-US');
 document.getElementById('dsLinks').textContent = links.length.toLocaleString('en-US');
