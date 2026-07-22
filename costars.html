@@ -246,7 +246,7 @@
     <div class="mp-tag">Method</div>
     <h3>How positions were computed</h3>
     <p>Positions were learned from the collaboration graph in three steps:</p>
-    <p><b>1 · Random walks.</b> Thousands of random walks were sampled across the graph, following edges with probability proportional to shared films; each walk yielded a sentence of names from the same working circles.</p>
+    <p><b>1 · Random walks.</b> Thousands of random walks were sampled across the graph, following edges with probability proportional to shared films. Each walk yielded a sentence of names from the same working circles.</p>
     <p><b>2 · node2vec embedding.</b> A skip-gram model (word2vec) was trained on these walks, assigning each person a 64-dimensional vector. People with similar collaboration neighborhoods received similar vectors, whether or not they ever shared a screen.</p>
     <p><b>3 · UMAP.</b> The 64 dimensions were projected to 3D, preserving local neighborhoods as faithfully as possible.</p>
     <p class="mp-note">Read locally, not globally: which dots huddle together is meaningful (frequent collaborators land ~9× closer than random pairs in this build); which island floats next to which is not.</p>
