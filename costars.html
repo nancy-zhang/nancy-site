@@ -86,12 +86,12 @@
   .lbl.sel{color:var(--cyan); font-weight:500;}
   .lbl.hov{color:var(--cyan); font-weight:500; font-size:11px;}
   .headrow{display:flex; gap:14px; align-items:flex-start;}
-  #d-photo-wrap{width:58px; height:74px; flex-shrink:0; position:relative;
+  #d-photo-wrap{width:104px; height:132px; flex-shrink:0; position:relative;
     border:1px solid var(--hair); background:var(--hair2); overflow:hidden;}
   #d-photo{width:100%; height:100%; object-fit:cover; display:none;
     filter:grayscale(.85) contrast(1.06) brightness(.96);}
   #d-mono{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    font-family:'Space Grotesk',sans-serif; font-size:20px; font-weight:600; color:var(--dim);
+    font-family:'Space Grotesk',sans-serif; font-size:30px; font-weight:600; color:var(--dim);
     letter-spacing:.05em;}
   #panPad{position:absolute; left:12px; bottom:12px; display:flex; gap:4px; z-index:20;}
   #panPad button{background:rgba(12,19,27,.85); border:1px solid var(--hair); border-radius:2px;
@@ -144,7 +144,7 @@
   #methodPop[hidden], #dataPop[hidden], #metricsPop[hidden]{display:none;}
   .mLink{border-bottom:1px dotted var(--muted); cursor:pointer;}
   .mLink:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
-  #d-meta .metrics{display:block; margin-top:3px; font-size:9px; white-space:nowrap; letter-spacing:.01em;}
+  #d-meta .mrow{display:block; margin-top:3px; font-size:10px; letter-spacing:.03em;}
   .stats a{color:inherit; text-decoration:none; border-bottom:1px dotted var(--muted);}
   .stats a:hover{color:var(--cyan); border-bottom-color:var(--cyan);}
   #dataLink{border-bottom:1px dotted var(--dim); cursor:pointer;}
@@ -738,7 +738,7 @@ async function loadPhoto(i){
   mono.textContent = n.n.split(' ').map(w=>w[0]).slice(0,2).join('');
   try{
     if(photoCache[n.n] === undefined)
-      photoCache[n.n] = n.p ? 'https://image.tmdb.org/t/p/w185' + n.p : await resolvePhoto(n);
+      photoCache[n.n] = n.p ? 'https://image.tmdb.org/t/p/w342' + n.p : await resolvePhoto(n);
     if(photoCache[n.n] && dossierFor === i){
       img.src = photoCache[n.n];
       img.onload = ()=>{ if(dossierFor === i){ img.style.display = 'block'; mono.style.display = 'none'; } };
@@ -762,9 +762,9 @@ function openDossier(i){
   loadPhoto(i);
   const fmtPct = v => (v < 1 ? v.toFixed(1) : Math.round(v)) + '%';
   const metricsLine = n.pr != null
-    ? `<span class="metrics"><span class="mLink">Centrality</span> top <b>${fmtPct(n.pr)}</b> ·
-       <span class="mLink">Clustering</span> <b>${n.cl.toFixed(2)}</b> ·
-       <span class="mLink">Bridging</span> top <b>${fmtPct(n.bt)}</b></span>`
+    ? `<span class="mrow"><span class="mLink">Centrality</span> top <b>${fmtPct(n.pr)}</b></span>
+       <span class="mrow"><span class="mLink">Clustering</span> <b>${n.cl.toFixed(2)}</b></span>
+       <span class="mrow"><span class="mLink">Bridging</span> top <b>${fmtPct(n.bt)}</b></span>`
     : '';
   const pl = (k, w) => `<b>${k}</b> ${w}${k===1?'':'s'}`;
   // zero clauses omitted; a director's director-collaborators are co-directors
@@ -773,7 +773,7 @@ function openDossier(i){
                dirs.length && pl(dirs.length, dirWord)]
     .filter(Boolean).join(' and ');
   document.getElementById('d-meta').innerHTML =
-    `<span class="metrics">Worked with ${who || 'no one on file'} across ${pl(n.f,'film')}</span>` +
+    `<span class="mrow">Worked with ${who || 'no one on file'} across ${pl(n.f,'film')}</span>` +
     metricsLine;
   document.querySelectorAll('#d-meta .mLink').forEach(el=>
     el.onclick = ()=> document.getElementById('metricsPop').hidden = false);
