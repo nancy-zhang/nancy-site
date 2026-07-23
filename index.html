@@ -126,7 +126,6 @@
     min-width: 0;
     margin-left: var(--sidebar-w);
     padding: 3rem 4rem 120px 4rem;
-    max-width: 820px;
   }
 
   .site-name {
@@ -341,7 +340,7 @@
   }
 
   /* ── Scroll padding so section headings clear ── */
-  #about, #pomona, #datemyfriend, #forfun {
+  #about, #resonancy, #pomona, #datemyfriend, #forfun {
     scroll-margin-top: 3rem;
   }
 
@@ -470,6 +469,7 @@
     </div>
     <nav id="nav">
       <a href="#about" class="active">About</a>
+      <a href="#resonancy">Resonancy</a>
       <a href="#datemyfriend">DateMyFriend</a>
       <a href="#pomona">Pomona</a>
       <a href="#forfun">For Fun</a>
@@ -506,6 +506,12 @@
       <p>My other interests include: Victorian literature, great films, French beading, and whimsical objects. My wildest dreams include: directing a movie, designing a fashion line, having a lemon tree in my backyard. </p>
       <p>I graduated Magna Cum Laude, Phi Beta Kappa with a degree in Math from Wellesley. My master's thesis at Harvard was on Approximate Bayesian Computation for Parameter Inference and Model Selection in Mechanistic Network Models, advised by J.P. Onnela.</p>
       <p>If you'd love to chat, reach out at nancyann [dot] zhang @ gmail!</p>
+    </section>
+
+    <!-- Resonancy -->
+    <section id="resonancy">
+      <div class="section-label">Resonancy</div>
+      <p>I have a small batch accessories studio featuring whatever I can dream up and execute. My first drop is an oversized Declaration of Independence scarf printed on 100% silk charmeuse and finished with either a simple rolled hem or fringe trim. Check it out at <a class="inline" href="https://resonancy.studio" target="_blank">resonancy.studio</a>.</p>
     </section>
 
     <!-- DateMyFriend -->
@@ -577,6 +583,7 @@
         <li>This summer, I'll be a Haystack Fellow for metalsmithing at Haystack Mountain School of Crafts</li>
         <li>I was a ball girl at the US Open in 2023. Before that, I hadn't even been to a tennis match before, but I was motivated to make the highly selective team because I wanted to get into tennis</li>
         <li>I'm obsessed with the game Tradle, where you guess a country based on its exports, Wordle style. I made a website to visualize global exports so I can study more effectively: <a class="inline" href="https://nancy-zhang.github.io/tradle-trainer/" target="_blank">Tradle Trainer</a></li>
+        <li>I love films! Check out <a class="inline" href="costars.html">Costar</a>, a network exploration of actors, actresses, and directors so we can easily see who's worked with who</li>
         <li>I love to write, and I maintain a pseudonymous blog</li>
         <li>I document many of my creative endeavors on TikTok under <@schrodingersbrat></li>
       </ul>
@@ -609,7 +616,7 @@
 
 <script>
   // ── Active nav on scroll ──
-  const sections = ['about','datemyfriend','pomona','forfun'];
+  const sections = ['about','resonancy','datemyfriend','pomona','forfun'];
   const navLinks = document.querySelectorAll('#nav a');
 
   const observer = new IntersectionObserver((entries) => {
